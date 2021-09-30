@@ -1,3 +1,5 @@
+ lines (20 sloc)  275 Bytes
+   
 pipeline {
     agent any
     stages {
@@ -6,15 +8,16 @@ pipeline {
                 echo "Testing......"
             }
         }
-    }
-    stage('Build') {
-        steps {
-            echo "Building......"
+    
+        stage('Build') {
+            steps {
+                echo "Building......"
+            }
         }
-    }
-    stage("Deploy") {
-        steps {
-            echo "Code Deployed."
+        stage("Deploy") {
+            steps {
+                echo "Code Deployed."
+            }
         }
     }
 }
